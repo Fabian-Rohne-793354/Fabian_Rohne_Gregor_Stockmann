@@ -96,7 +96,20 @@ def Blüte():                #Blüte Code mit for-Schleife und n = n +1
         n = n +1
         end_fill()
         
-
+def Pflaume():
+    begin_fill()
+    fillcolor('purple')
+    setheading(270)
+    forward(5)
+    right(22.5)
+    forward(10)
+    left(45)
+    forward(10)
+    left(135)
+    forward(10)
+    left(45)
+    forward(10)
+    end_fill()
 
 def drawLsystem(instructions, distance_1, distance_2, distance_3):
     savedInfoList = []

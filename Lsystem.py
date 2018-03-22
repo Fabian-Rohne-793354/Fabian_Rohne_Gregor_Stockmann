@@ -27,15 +27,15 @@ def applyRules(n, ch):                                    # definiert eine Funkt
         x = random()                                      # weist x einen zufälligen float zwischen Null und Eins zu   
         print(x)                                          # gibt die Variable 'x' in der Console aus   
         if x < 0.25:                                      # wenn die Variable 'x' kleiner als 0.25 ist wende die Regel B>[+B-B] an      
-            newString = '[+B-B]'                          #  
+            newString = '[+B-B]'                            
         elif x < 0.5:                                     # wenn die Variable 'x' kleiner als 0.5 ist wende die Regel B>[-B+B] an     
-            newString = '[-B+B]'                          #  
+            newString = '[-B+B]'                            
         elif x < 0.7:                                     # wenn die Variable 'x' kleiner als 0.7 ist wende die Regel B>[+B+C+C] an 
-            newString = '[+B+C+C]'                        #  
+            newString = '[+B+C+C]'                          
         elif x < 0.9:                                     # wenn die Variable 'x' kleiner als 0.9 ist wende die Regel B>[-B-C-C] an  
-            newString = '[-B-C-C]'                        #  
+            newString = '[-B-C-C]'                         
         elif x < 1.0:                                     # wenn die Variable 'x' kleiner als 1.0 ist wende die Regel B>[-C+C] an  
-            newString = '[-C+C]'                          #  
+            newString = '[-C+C]'                            
         if n > 1:                                         # wenn der in die Funktion eigegebene Integer 'n' größer 0 ist führt folgende Anweisungen aus      
             n = n - 1                                     # subtrahiert 1 von 'n' 
             newString = processString(n, newString)       # weist der lokalen Variable 'newString' das Resultat der Funktion 'processString' mit den Argumenten 'n' (int) und 'newString' (str)     
@@ -44,16 +44,16 @@ def applyRules(n, ch):                                    # definiert eine Funkt
     elif ch == "C":                                       # wenn der in die Funktion eigegebene String 'ch' dem String 'C' entspricht führe folgende Anweisungen aus      
        x = random()                                       # weist x einen zufälligen float zwischen Null und Eins zu
        print(x)                                           # gibt die Variable 'x' in der Console aus
-       if x < 0.25:                                       # wenn die Variable 'x' kleiner als 0.25 ist wende die Regel C>[-C+C]
-           newString = '[-C+C+D]'                           #
-       elif x < 0.5:                                      # wenn die Variable 'x' kleiner als 0.5 ist wende die Regel C>[+C-C]
-           newString = '[+C-C-D]'                           #
+       if x < 0.25:                                       # wenn die Variable 'x' kleiner als 0.25 ist wende die Regel C>[-C+C+D]
+           newString = '[-C+C+D]'
+       elif x < 0.5:                                      # wenn die Variable 'x' kleiner als 0.5 ist wende die Regel C>[+C-C-D]
+           newString = '[+C-C-D]'
        elif x < 0.7:                                      # wenn die Variable 'x' kleiner als 0.7 ist wende die Regel C>[-C-D]
-           newString = '[-C-D]'                           #
+           newString = '[-C-D]'
        elif x < 0.9:                                      # wenn die Variable 'x' kleiner als 0.9 ist wende die Regel C>[+C+D]
-           newString = '[+C+D]'                           #
+           newString = '[+C+D]'
        elif x < 0.95:                                     # wenn die Variable 'x' kleiner als 0.95 ist wende die Regel C>[-C+E]
-           newString = '[-C+E]'                           #
+           newString = '[-C+E]'
        elif x < 1.0:                                      # wenn die Variable 'x' kleiner als 1.0 ist wende die Regel C>[+C-E]
            newString = '[+C-E]'                           #
        if n > 1:                                          # wenn der in die Funktion eigegebene Integer 'n' größer 0 ist führt folgende Anweisungen aus
@@ -62,6 +62,6 @@ def applyRules(n, ch):                                    # definiert eine Funkt
            newString = "C" + newString                    # Addiert den int 'C' zu der Variable 'newString'
        else: newString = "C" + newString                  # wenn die if Bedingung nicht erfüllt ist wird der int 'C' zu der lokalen Variable 'newString' addiert
     else:                                                 # wenn ch weder dem int 'A' noch 'B' noch 'C' entspricht setze 'newString' auf ch
-        newString = ch                                    #
+        newString = ch                                    
     
     return newString                                      # gibt newString als Ergebnis der Funktion aus 

@@ -8,7 +8,7 @@ from Lsystem import *                           # importiert das Modul welches d
 from turtle_baum import *                       # importiert das Modul welches das L-System mittels turtle graphics visualisiert
 from tkinter import * 
 
-def main(n,d_1,d_2,d_3,a_1,a_2):                # definiert die Funktion 'main'
+def main(n,d_1,d_2,d_3,x,y):                # definiert die Funktion 'main'
     inst = processString(n, "[A]")                # greift auf eine Funktion des Moduls L-System zu um den String für das L-System zu generieren
     print(inst)                                 # gibt den String des L-Systems in der Konsole aus 
     
@@ -17,7 +17,7 @@ def main(n,d_1,d_2,d_3,a_1,a_2):                # definiert die Funktion 'main'
     left(90)
     pendown()                                   # Turtle fängt an zu zeichnen 
     speed(0)                                    # Geschwindigkeit
-    drawLsystem(inst,d_1,d_2,d_3,a_1,a_2)       # greift auf eine Funktion des Moduls 'turtle_baum' um den generierten String zu zeichnen
+    drawLsystem(inst,d_1,d_2,d_3,x,y)       # greift auf eine Funktion des Moduls 'turtle_baum' um den generierten String zu zeichnen
     ts = getscreen()                            # weist der Variable 'ts' das Objekt zu welches Turtle gezeichnet hat 
     ts.getcanvas().postscript(file="tree.eps")  # speichert das gezeichnete Objekt als Vektiorgrafik
     done()                                      # Turtle ist fertig mit zeichnen
