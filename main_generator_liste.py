@@ -11,7 +11,7 @@ Die Dateien Lsystem.py und turtle_baum_liste.py zu den gleichnamigen Modulen mü
 
 from Lsystem import *                            # importiert das Modul welches den String des L-Systems generiert 
 from turtle_baum_liste import *                  # importiert das Modul welches das L-System mittels turtle graphics visualisiert
-from tkinter import                              # importiert das Modul 'tkinter'
+from tkinter import *                            # importiert das Modul 'tkinter'
 import os                                        # importiert das Modul 'os'
 
 def main(n,L):                                   # definiert die Funktion 'main'
